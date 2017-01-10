@@ -9,12 +9,9 @@ export default class Random extends React.Component{
   }
 
   fetch(){
-    console.log('i am fetching');
-    debugger;
     const num = +this.number.value;
     axios.get(`https://qrng.anu.edu.au/API/jsonI.php?length=${num}&type=uint16`)
     .then(response => {
-      debugger;
       const data = response.data.data;
       this.setState({data});
     })
