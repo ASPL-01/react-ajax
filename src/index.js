@@ -7,11 +7,13 @@ import About from './components/About';
 import Faq from './components/Faq';
 import Boxes from './components/boxes/Boxes';
 import Random from './components/Random';
+import Currency from './components/Currency';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
+      <Route path="currency" component={Currency} />
       <Route path="random" component={Random} />
       <Route path="boxes" component={Boxes} />
       <Route path="about" component={About} />
